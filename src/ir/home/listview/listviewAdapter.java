@@ -25,7 +25,9 @@ public class listviewAdapter extends BaseAdapter {
 	// @Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return list.size();
+		if (list != null)
+			return list.size();
+		return 0;
 	}
 
 	// @Override
@@ -75,4 +77,7 @@ public class listviewAdapter extends BaseAdapter {
 		return convertView;
 	}
 
+	public void setDataList(ArrayList<HashMap<String, String>> data) {
+		this.list = data;
+	}
 }
